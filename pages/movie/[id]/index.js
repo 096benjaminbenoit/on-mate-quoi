@@ -1,5 +1,6 @@
 import { server } from '@/config'
 import axios from 'axios'
+import Link from 'next/link'
 
 const Movie = ({ movie }) => {
     console.log(movie)
@@ -21,12 +22,12 @@ const Movie = ({ movie }) => {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
-                <a href="/" className='flex py-7'>
+                <Link href="/" className='flex py-7'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
                     </svg>
                     <span className='ps-2'>Retour à l'accueil</span>
-                </a>
+                </Link>
                 <div className="lg:max-w-lg">
                 <p className="text-base font-semibold leading-7 text-indigo-600">{movie.release_date}</p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{movie.title}</h1>
